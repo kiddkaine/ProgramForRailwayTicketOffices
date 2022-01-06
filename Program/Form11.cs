@@ -65,7 +65,7 @@ namespace Program
         }
         public void GetFirstListFlights()
         {
-            string commandStr = "SELECT id_train AS 'Номер поезда', route_number AS 'Номер маршрута', price AS 'Цена', " +
+            string commandStr = "SELECT id_train AS 'Номер поезда', route_number AS 'Номер маршрута', price AS 'Цена (руб.)', " +
                 "departure_station AS 'Станция отправления', departure_date AS 'Дата отправления', " +
                 "arrival_station AS 'Станция прибытия', arrival_date AS 'Дата прибытия', id_state AS 'Статус' FROM flights";
             conn.Open();
@@ -100,7 +100,6 @@ namespace Program
             toolStripStatusLabel1.Text = $"Добавлен заказ с ID: {SomeClass.new_inserted_order_id}";
             conn.Close();
         }
-
         public Form11()
         {
             InitializeComponent();
@@ -284,6 +283,11 @@ namespace Program
         private void button4_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            bSource.Filter = "[Станция прибытия] LIKE'" + textBox1.Text + "%'";
         }
     }
 }
