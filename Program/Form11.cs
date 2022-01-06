@@ -203,7 +203,7 @@ namespace Program
                 double price_ticket = Convert.ToDouble(dataGridView2.Rows[i].Cells[3].Value);
                 sum_order += Convert.ToInt32(count_ticket) * price_ticket;
             }
-            label1.Text = $"Цена билета: {sum_order.ToString()} рублей";
+            label1.Text = $"Итоговая сумма: {sum_order.ToString()} рублей";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -217,7 +217,7 @@ namespace Program
             try
             {
                 sum_order += Convert.ToDouble(dataGridView2.Rows[rowNumber].Cells[4].Value) * Convert.ToDouble(dataGridView2.Rows[rowNumber].Cells[2].Value);
-                label1.Text = $"Цена билета: {sum_order.ToString()} рублей";
+                label1.Text = $"Итоговая сумма: {sum_order.ToString()} рублей";
             }
             catch
             {
@@ -263,9 +263,9 @@ namespace Program
                 command.ExecuteNonQuery();
             }
             conn.Close();
-            toolStripStatusLabel1.Text = $"Итоговая сумма заказа №{SomeClass.new_inserted_order_id} составляет {sumOrder} рублей";
             if (issetOrder)
             {
+                toolStripStatusLabel1.Text = $"Итоговая сумма заказа №{SomeClass.new_inserted_order_id} составляет {sumOrder} рублей";
                 conn.Open();
                 string query2 = $"UPDATE orders SET sum_order='{sumOrder}' WHERE (id_order='{SomeClass.new_inserted_order_id}')";
                 MySqlCommand comman1 = new MySqlCommand(query2, conn);
@@ -276,7 +276,7 @@ namespace Program
             }
             else
             {
-                MessageBox.Show("Заказ не создан. Создайте заказ", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Заказ не создан. Создайте заказ!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
