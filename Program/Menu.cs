@@ -82,5 +82,10 @@ namespace Program
             Form11 Form11 = new Form11();
             Form11.ShowDialog();
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

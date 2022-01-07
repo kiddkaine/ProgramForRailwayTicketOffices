@@ -43,6 +43,7 @@ namespace Program
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button12 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -187,12 +188,24 @@ namespace Program
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "Информация";
             // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(12, 331);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(210, 23);
+            this.button12.TabIndex = 11;
+            this.button12.Text = "Закрыть";
+            this.toolTip1.SetToolTip(this.button12, "Закрыть приложение.");
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(1)))), ((int)(((byte)(14)))));
-            this.ClientSize = new System.Drawing.Size(234, 462);
+            this.ClientSize = new System.Drawing.Size(234, 367);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
@@ -206,8 +219,8 @@ namespace Program
             this.Controls.Add(this.button1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(250, 500);
-            this.MinimumSize = new System.Drawing.Size(250, 500);
+            this.MaximumSize = new System.Drawing.Size(250, 405);
+            this.MinimumSize = new System.Drawing.Size(250, 405);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное меню";
@@ -229,6 +242,7 @@ namespace Program
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button12;
     }
 }
 
