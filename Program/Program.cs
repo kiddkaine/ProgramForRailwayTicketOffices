@@ -8,7 +8,6 @@ namespace Program
 {
     static class SomeClass
     {
-        public static string variable_class;
         public static string new_inserted_id;
         public static string new_inserted_order_id;
     }
