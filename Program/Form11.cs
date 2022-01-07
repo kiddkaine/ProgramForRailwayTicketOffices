@@ -166,6 +166,8 @@ namespace Program
             }
 
             dataGridView1.MultiSelect = false;
+
+            bSource.Filter = "[Статус] = " + 1;
         }
         private void dataGridView1_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
