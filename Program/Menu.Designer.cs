@@ -178,7 +178,7 @@ namespace Program
             this.button11.Size = new System.Drawing.Size(210, 23);
             this.button11.TabIndex = 10;
             this.button11.Text = "Оформление билета";
-            this.toolTip1.SetToolTip(this.button11, "Оформление билета.");
+            this.toolTip1.SetToolTip(this.button11, "Оформление заказа.\r\nБронирование билета на определённого клиента.");
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
