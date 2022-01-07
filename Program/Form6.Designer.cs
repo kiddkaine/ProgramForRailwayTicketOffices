@@ -51,7 +51,7 @@ namespace Program
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Удалить";
+            this.button1.Text = "Уволить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -97,7 +97,7 @@ namespace Program
             this.MinimumSize = new System.Drawing.Size(650, 500);
             this.Name = "Form6";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Удаление сотрудника";
+            this.Text = "Увольнение сотрудника";
             this.Load += new System.EventHandler(this.Form6_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

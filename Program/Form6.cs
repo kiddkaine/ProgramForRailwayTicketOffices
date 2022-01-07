@@ -75,7 +75,7 @@ namespace Program
             if (DeleteEmployees(id_delete))
             {
                 GetListEmployees(listBox1);
-                MessageBox.Show("Клиент успешно удалён!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Сотрудник уволен!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (String.IsNullOrWhiteSpace(textBox1.Text))
             {

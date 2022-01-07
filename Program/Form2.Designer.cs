@@ -174,7 +174,7 @@ namespace Program
             this.MinimumSize = new System.Drawing.Size(1000, 325);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Таблица сотрудников";
+            this.Text = "Список сотрудников";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
