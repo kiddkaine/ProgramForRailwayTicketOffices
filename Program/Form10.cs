@@ -155,7 +155,7 @@ namespace Program
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ControlData.ID_TICKET = id_selected_rows;
+            ControlData.ID = id_selected_rows;
             Form10_Edit Form10_Ticket= new Form10_Edit();
             Form10_Ticket.ShowDialog();
             reload_list();

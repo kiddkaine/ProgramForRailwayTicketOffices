@@ -21,9 +21,9 @@ namespace Program
         public void SelectData()
         {
             conn.Open();
-            this.Text = $"Редактор поезда №{ControlData.ID_TICKET}";
+            this.Text = $"Редактор поезда №{ControlData.ID}";
             string dateFlightFromDB;
-            string sql = $"SELECT * FROM flights WHERE id_train={ControlData.ID_TICKET}";
+            string sql = $"SELECT * FROM flights WHERE id_train={ControlData.ID}";
             MySqlCommand command = new MySqlCommand(sql, conn);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -102,7 +102,7 @@ namespace Program
                 string id_state = comboBox1.SelectedValue.ToString();
                 conn.Open();
                 string query2 = $"UPDATE flights SET route_number='{route_number}', price='{price}', departure_station='{departure_station}'," +
-                    $"departure_date='{departure_date}', arrival_station='{arrival_station}', arrival_date='{arrival_date}', id_state='{id_state}' WHERE id_train = {ControlData.ID_TICKET}";
+                    $"departure_date='{departure_date}', arrival_station='{arrival_station}', arrival_date='{arrival_date}', id_state='{id_state}' WHERE id_train = {ControlData.ID}";
                 MySqlCommand command = new MySqlCommand(query2, conn);
                 command.ExecuteNonQuery();
                 conn.Close();

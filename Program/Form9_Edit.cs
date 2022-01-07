@@ -21,8 +21,8 @@ namespace Program
         public void SelectData()
         {
             conn.Open();
-            this.Text = $"Редактор клиента ID: {ControlData.ID_TICKET}";
-            string sql_select_current_client = $"SELECT id_client, fio_client, pass_client, id_privilege FROM clients WHERE id_client = {ControlData.ID_TICKET}";
+            this.Text = $"Редактор клиента ID: {ControlData.ID}";
+            string sql_select_current_client = $"SELECT id_client, fio_client, pass_client, id_privilege FROM clients WHERE id_client = {ControlData.ID}";
             MySqlCommand command = new MySqlCommand(sql_select_current_client, conn);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -91,7 +91,7 @@ namespace Program
             else
             {
                 string sql_update_current_client = $"UPDATE clients SET fio_client='{new_fio_client}', pass_client='{new_pass_client}', id_privilege='{new_id_privilege}'" +
-                $"WHERE (id_client='{ControlData.ID_TICKET}')";
+                $"WHERE (id_client='{ControlData.ID}')";
                 conn.Open();
                 MySqlCommand command= new MySqlCommand(sql_update_current_client, conn);
                 command.ExecuteNonQuery();
