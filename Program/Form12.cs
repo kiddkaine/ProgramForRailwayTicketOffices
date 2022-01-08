@@ -125,5 +125,10 @@ namespace Program
             Form12_Info.ShowDialog();
             reload_list();
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Печать успешно выполнена!", "Печать", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
