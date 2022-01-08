@@ -85,7 +85,8 @@ namespace Program
 
         private void button12_Click(object sender, EventArgs e)
         {
-            Close();
+            Form12 Form12 = new Form12();
+            Form12.ShowDialog();
         }
     }
 }
