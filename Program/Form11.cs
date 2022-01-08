@@ -168,6 +168,7 @@ namespace Program
             dataGridView1.MultiSelect = false;
 
             bSource.Filter = "[Статус] = " + 1;
+
         }
         private void dataGridView1_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -215,7 +216,14 @@ namespace Program
             dataGridView2.Rows[rowNumber].Cells[1].Value = titleItems_selected_rows;
             dataGridView2.Rows[rowNumber].Cells[2].Value = "1";
             dataGridView2.Rows[rowNumber].Cells[3].Value = priceItems_selected_rows;
-            dataGridView2.Rows[rowNumber].Cells[4].Value = priceItems_selected_rows;
+            if (label7.Text == "1")
+            {
+                dataGridView2.Rows[rowNumber].Cells[4].Value = Convert.ToInt32(priceItems_selected_rows) / 2;
+            }
+            if (label7.Text == "2")
+            {
+                dataGridView2.Rows[rowNumber].Cells[4].Value = priceItems_selected_rows;
+            }
             try
             {
                 sum_order += Convert.ToDouble(dataGridView2.Rows[rowNumber].Cells[4].Value) * Convert.ToDouble(dataGridView2.Rows[rowNumber].Cells[2].Value);
@@ -268,14 +276,28 @@ namespace Program
                 }
                 conn.Close();
 
-                toolStripStatusLabel1.Text = $"Итоговая сумма заказа №{SomeClass.new_inserted_order_id} составляет {sumOrder} рублей";
-                conn.Open();
-                string query2 = $"UPDATE orders SET sum_order='{sumOrder}' WHERE (id_order='{SomeClass.new_inserted_order_id}')";
-                MySqlCommand comman1 = new MySqlCommand(query2, conn);
-                comman1.ExecuteNonQuery();
-                conn.Close();
-                dataGridView2.Rows.Clear();
-                SomeClass.new_inserted_order_id = "0";
+                if (label7.Text == "1")
+                {
+                    toolStripStatusLabel1.Text = $"Итоговая сумма заказа №{SomeClass.new_inserted_order_id} составляет {sumOrder / 2} рублей";
+                    conn.Open();
+                    string query2 = $"UPDATE orders SET sum_order='{sumOrder / 2}' WHERE (id_order='{SomeClass.new_inserted_order_id}')";
+                    MySqlCommand comman1 = new MySqlCommand(query2, conn);
+                    comman1.ExecuteNonQuery();
+                    conn.Close();
+                    dataGridView2.Rows.Clear();
+                    SomeClass.new_inserted_order_id = "0";
+                }
+                if (label7.Text == "2")
+                {
+                    toolStripStatusLabel1.Text = $"Итоговая сумма заказа №{SomeClass.new_inserted_order_id} составляет {sumOrder} рублей";
+                    conn.Open();
+                    string query2 = $"UPDATE orders SET sum_order='{sumOrder}' WHERE (id_order='{SomeClass.new_inserted_order_id}')";
+                    MySqlCommand comman1 = new MySqlCommand(query2, conn);
+                    comman1.ExecuteNonQuery();
+                    conn.Close();
+                    dataGridView2.Rows.Clear();
+                    SomeClass.new_inserted_order_id = "0";
+                }
             }
             else
             {
@@ -291,6 +313,21 @@ namespace Program
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             bSource.Filter = "[Станция прибытия] LIKE'" + textBox1.Text + "%'";
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected_id_flight = comboBox1.SelectedValue.ToString();
+            conn.Open();
+            string sql = $"SELECT id_privilege FROM clients WHERE id_client={selected_id_flight}";
+            MySqlCommand command = new MySqlCommand(sql, conn);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                label7.Text = reader[0].ToString();
+            }
+            reader.Close();
+            conn.Close();
         }
     }
 }
