@@ -286,6 +286,7 @@ namespace Program
                     conn.Close();
                     dataGridView2.Rows.Clear();
                     SomeClass.new_inserted_order_id = "0";
+                    MessageBox.Show("Оформление билета прошло успешно!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 if (label7.Text == "2")
                 {
@@ -297,6 +298,7 @@ namespace Program
                     conn.Close();
                     dataGridView2.Rows.Clear();
                     SomeClass.new_inserted_order_id = "0";
+                    MessageBox.Show("Оформление билета прошло успешно!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
