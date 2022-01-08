@@ -94,5 +94,10 @@ namespace Program
             Form13 Form13 = new Form13();
             Form13.ShowDialog();
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
