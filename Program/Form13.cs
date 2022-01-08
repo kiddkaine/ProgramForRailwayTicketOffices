@@ -29,6 +29,7 @@ namespace Program
             index_selected_rows = dataGridView1.SelectedCells[0].RowIndex.ToString();
             id_selected_rows = dataGridView1.Rows[Convert.ToInt32(index_selected_rows)].Cells[0].Value.ToString();
             toolStripLabel5.Text = id_selected_rows;
+            ControlData.ID = id_selected_rows;
         }
         public void DeleteTickets()
         {
@@ -111,9 +112,6 @@ namespace Program
             }
 
             dataGridView1.MultiSelect = false;
-
-            int count_rows = dataGridView1.RowCount - 1;
-            toolStripLabel7.Text = (count_rows).ToString();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

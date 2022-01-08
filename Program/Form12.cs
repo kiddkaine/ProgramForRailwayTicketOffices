@@ -32,8 +32,6 @@ namespace Program
         }
         private void Form12_Load(object sender, EventArgs e)
         {
-            reload_list();
-
             dataGridView1.DataSource = ControlData.GetListOrders();
 
             dataGridView1.Columns[0].Visible = true;
@@ -71,10 +69,10 @@ namespace Program
 
             dataGridView1.MultiSelect = false;
 
+            reload_list();
+
             int count_rows = dataGridView1.RowCount - 1;
             toolStripLabel6.Text = (count_rows).ToString();
-
-            reload_list();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
