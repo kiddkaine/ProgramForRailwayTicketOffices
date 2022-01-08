@@ -45,7 +45,7 @@ namespace Program
         public static BindingSource GetListOrders()
         {
             conn.Open();
-            string commandStr = "SELECT id_order AS 'ID заказа', date_order AS 'Дата заказа', id_client AS 'ID клиента', sum_order AS 'Сумма заказа (руб.)' FROM orders";
+            string commandStr = "SELECT id_order AS 'Номер заказа', date_order AS 'Дата заказа', id_client AS 'ID клиента', sum_order AS 'Сумма заказа (руб.)' FROM orders";
             MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
             MyDA.Fill(table);
             bSource.DataSource = table;
