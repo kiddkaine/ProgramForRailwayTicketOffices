@@ -108,9 +108,9 @@ namespace Program
             while (reader_list.Read())
             {
                 string s = "";
-                s += "ID рейса: " + reader_list[0].ToString() + "\n";
+                s += "Номер поезда: " + reader_list[0].ToString() + "\n";
                 s += "Номер маршрута: " + reader_list[1].ToString() + "\n";
-                s += "Номер поезда: " + reader_list[2].ToString() + "\n";
+                s += "Цена (руб.): " + reader_list[2].ToString() + " рублей\n";
                 s += "Станция отправления: " + reader_list[3].ToString() + "\n";
                 s += "Дата отправления: " + reader_list[4].ToString() + "\n";
                 s += "Станция прибытия: " + reader_list[5].ToString() + "\n";
