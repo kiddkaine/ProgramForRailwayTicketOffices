@@ -52,6 +52,25 @@ namespace Program
             conn.Close();
             return bSource;
         }
+        public static void DeleteTickets(string id_ticket)
+        {
+            string sql_delete_order = "DELETE FROM ticket_orders WHERE id_ticket='" + id_ticket + "'";
+            MySqlCommand delete_order = new MySqlCommand(sql_delete_order, conn);
+            conn.Open();
+            delete_order.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public static BindingSource GetListTickets()
+        {
+            conn.Open();
+            string commandStr = "SELECT id_ticket AS 'ID билета', id_train AS 'Номер поезда', quantity_ticket AS 'Количество билетов', id_order AS 'ID заказа' FROM ticket_orders";
+            MyDA.SelectCommand = new MySqlCommand(commandStr, conn);
+            MyDA.Fill(table);
+            bSource.DataSource = table;
+            conn.Close();
+            return bSource;
+        }
 
         public static void ReloadList()
         {

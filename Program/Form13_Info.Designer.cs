@@ -1,7 +1,7 @@
 ﻿
 namespace Program
 {
-    partial class Form12_Info
+    partial class Form13_Info
     {
         /// <summary>
         /// Required designer variable.
@@ -29,14 +29,23 @@ namespace Program
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form12_Info));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form13_Info));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(344, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -45,7 +54,7 @@ namespace Program
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 24);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
             // label2
@@ -55,7 +64,7 @@ namespace Program
             this.label2.Location = new System.Drawing.Point(12, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 24);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             // 
             // label3
@@ -65,7 +74,7 @@ namespace Program
             this.label3.Location = new System.Drawing.Point(12, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 24);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 3;
             this.label3.Text = "label3";
             // 
             // label4
@@ -75,35 +84,26 @@ namespace Program
             this.label4.Location = new System.Drawing.Point(12, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 24);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 4;
             this.label4.Text = "label4";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(344, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Form12_Info
+            // Form13_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 152);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(500, 190);
             this.MinimumSize = new System.Drawing.Size(500, 190);
-            this.Name = "Form12_Info";
+            this.Name = "Form13_Info";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Отчёт";
-            this.Load += new System.EventHandler(this.Form12_Info_Load);
+            this.Load += new System.EventHandler(this.Form13_Info_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -112,10 +112,10 @@ namespace Program
 
         #endregion
 
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

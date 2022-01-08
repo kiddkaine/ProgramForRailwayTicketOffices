@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Program
 {
@@ -33,6 +32,8 @@ namespace Program
         }
         private void Form12_Load(object sender, EventArgs e)
         {
+            reload_list();
+
             dataGridView1.DataSource = ControlData.GetListOrders();
 
             dataGridView1.Columns[0].Visible = true;
@@ -72,6 +73,8 @@ namespace Program
 
             int count_rows = dataGridView1.RowCount - 1;
             toolStripLabel6.Text = (count_rows).ToString();
+
+            reload_list();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -112,10 +115,6 @@ namespace Program
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

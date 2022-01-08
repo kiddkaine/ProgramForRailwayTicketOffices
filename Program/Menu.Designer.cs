@@ -44,6 +44,7 @@ namespace Program
             this.button11 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -195,9 +196,19 @@ namespace Program
             this.button12.Size = new System.Drawing.Size(210, 23);
             this.button12.TabIndex = 11;
             this.button12.Text = "Заказы";
-            this.toolTip1.SetToolTip(this.button12, "Закрыть приложение.");
+            this.toolTip1.SetToolTip(this.button12, "Просмотр заказов, вывод информации по ID.\r\nРаспечатка таблицы с заказами.");
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(12, 360);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(210, 23);
+            this.button13.TabIndex = 12;
+            this.button13.Text = "Билеты";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // Menu
             // 
@@ -205,6 +216,7 @@ namespace Program
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(1)))), ((int)(((byte)(14)))));
             this.ClientSize = new System.Drawing.Size(234, 462);
+            this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -241,6 +253,7 @@ namespace Program
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
     }
 }
 
