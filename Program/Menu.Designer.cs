@@ -77,7 +77,7 @@ namespace Program
             // button3
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button3.Location = new System.Drawing.Point(12, 70);
+            this.button3.Location = new System.Drawing.Point(296, 12);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(210, 23);
             this.button3.TabIndex = 2;
@@ -89,7 +89,7 @@ namespace Program
             // button4
             // 
             this.button4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button4.Location = new System.Drawing.Point(12, 99);
+            this.button4.Location = new System.Drawing.Point(512, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(210, 23);
             this.button4.TabIndex = 3;
@@ -101,7 +101,7 @@ namespace Program
             // button5
             // 
             this.button5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button5.Location = new System.Drawing.Point(12, 128);
+            this.button5.Location = new System.Drawing.Point(296, 41);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(210, 23);
             this.button5.TabIndex = 4;
@@ -113,7 +113,7 @@ namespace Program
             // button6
             // 
             this.button6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button6.Location = new System.Drawing.Point(12, 157);
+            this.button6.Location = new System.Drawing.Point(512, 41);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(210, 23);
             this.button6.TabIndex = 5;
@@ -125,7 +125,7 @@ namespace Program
             // button7
             // 
             this.button7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button7.Location = new System.Drawing.Point(12, 186);
+            this.button7.Location = new System.Drawing.Point(12, 99);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(210, 23);
             this.button7.TabIndex = 6;
@@ -137,7 +137,7 @@ namespace Program
             // button8
             // 
             this.button8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button8.Location = new System.Drawing.Point(12, 215);
+            this.button8.Location = new System.Drawing.Point(512, 99);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(210, 23);
             this.button8.TabIndex = 7;
@@ -150,7 +150,7 @@ namespace Program
             // button9
             // 
             this.button9.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button9.Location = new System.Drawing.Point(12, 244);
+            this.button9.Location = new System.Drawing.Point(512, 128);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(210, 23);
             this.button9.TabIndex = 8;
@@ -163,7 +163,7 @@ namespace Program
             // button10
             // 
             this.button10.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button10.Location = new System.Drawing.Point(12, 273);
+            this.button10.Location = new System.Drawing.Point(512, 157);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(210, 23);
             this.button10.TabIndex = 9;
@@ -176,7 +176,7 @@ namespace Program
             // button11
             // 
             this.button11.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button11.Location = new System.Drawing.Point(12, 302);
+            this.button11.Location = new System.Drawing.Point(12, 186);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(210, 23);
             this.button11.TabIndex = 10;
@@ -192,7 +192,7 @@ namespace Program
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(12, 331);
+            this.button12.Location = new System.Drawing.Point(12, 243);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(210, 23);
             this.button12.TabIndex = 11;
@@ -203,7 +203,7 @@ namespace Program
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(12, 360);
+            this.button13.Location = new System.Drawing.Point(12, 272);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(210, 23);
             this.button13.TabIndex = 12;
@@ -214,7 +214,7 @@ namespace Program
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(12, 389);
+            this.button14.Location = new System.Drawing.Point(512, 272);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(210, 23);
             this.button14.TabIndex = 13;
@@ -228,7 +228,7 @@ namespace Program
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(1)))), ((int)(((byte)(14)))));
-            this.ClientSize = new System.Drawing.Size(234, 424);
+            this.ClientSize = new System.Drawing.Size(734, 307);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
@@ -245,8 +245,6 @@ namespace Program
             this.Controls.Add(this.button1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(250, 462);
-            this.MinimumSize = new System.Drawing.Size(250, 462);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное меню";
