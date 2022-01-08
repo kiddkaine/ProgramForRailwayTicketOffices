@@ -208,6 +208,7 @@ namespace Program
             this.button13.Size = new System.Drawing.Size(210, 23);
             this.button13.TabIndex = 12;
             this.button13.Text = "Билеты";
+            this.toolTip1.SetToolTip(this.button13, "Просмотр билетов, вывод информации по ID.\r\nРаспечатка таблицы с билетами.");
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
@@ -218,6 +219,7 @@ namespace Program
             this.button14.Size = new System.Drawing.Size(210, 23);
             this.button14.TabIndex = 13;
             this.button14.Text = "Закрыть";
+            this.toolTip1.SetToolTip(this.button14, "Закрыть приложение.");
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
@@ -226,7 +228,7 @@ namespace Program
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(1)))), ((int)(((byte)(14)))));
-            this.ClientSize = new System.Drawing.Size(234, 462);
+            this.ClientSize = new System.Drawing.Size(234, 424);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
@@ -243,6 +245,8 @@ namespace Program
             this.Controls.Add(this.button1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(250, 462);
+            this.MinimumSize = new System.Drawing.Size(250, 462);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное меню";
