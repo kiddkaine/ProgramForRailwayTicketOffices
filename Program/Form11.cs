@@ -269,7 +269,7 @@ namespace Program
                     double priceItems = Convert.ToDouble(dataGridView2.Rows[i].Cells[3].Value);
                     string idOrder = SomeClass.new_inserted_order_id;
                     sumOrder += Convert.ToInt32(countItems) * priceItems;
-                    string query = $"INSERT INTO ticket_orders (id_ticket, quantity_ticket, id_order) " +
+                    string query = $"INSERT INTO ticket_orders (id_train, quantity_ticket, id_order) " +
                         $"VALUES ('{idItems}', '{countItems}', {idOrder})";
                     MySqlCommand command = new MySqlCommand(query, conn);
                     command.ExecuteNonQuery();
