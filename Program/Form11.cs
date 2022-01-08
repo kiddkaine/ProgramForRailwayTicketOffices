@@ -257,53 +257,60 @@ namespace Program
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            if (issetOrder)
+            try
             {
-                double sumOrder = 0;
-                int countPosition = dataGridView2.Rows.Count;
-                conn.Open();
-                for (int i = 0; i < countPosition; i++)
+                if (issetOrder)
                 {
-                    string idItems = dataGridView2.Rows[i].Cells[0].Value.ToString();
-                    string countItems = dataGridView2.Rows[i].Cells[2].Value.ToString();
-                    double priceItems = Convert.ToDouble(dataGridView2.Rows[i].Cells[3].Value);
-                    string idOrder = SomeClass.new_inserted_order_id;
-                    sumOrder += Convert.ToInt32(countItems) * priceItems;
-                    string query = $"INSERT INTO ticket_orders (id_train, quantity_ticket, id_order) " +
-                        $"VALUES ('{idItems}', '{countItems}', {idOrder})";
-                    MySqlCommand command = new MySqlCommand(query, conn);
-                    command.ExecuteNonQuery();
-                }
-                conn.Close();
+                    double sumOrder = 0;
+                    int countPosition = dataGridView2.Rows.Count;
+                    conn.Open();
+                    for (int i = 0; i < countPosition; i++)
+                    {
+                        string idItems = dataGridView2.Rows[i].Cells[0].Value.ToString();
+                        string countItems = dataGridView2.Rows[i].Cells[2].Value.ToString();
+                        double priceItems = Convert.ToDouble(dataGridView2.Rows[i].Cells[3].Value);
+                        string idOrder = SomeClass.new_inserted_order_id;
+                        sumOrder += Convert.ToInt32(countItems) * priceItems;
+                        string query = $"INSERT INTO ticket_orders (id_train, quantity_ticket, id_order) " +
+                            $"VALUES ('{idItems}', '{countItems}', {idOrder})";
+                        MySqlCommand command = new MySqlCommand(query, conn);
+                        command.ExecuteNonQuery();
+                    }
+                    conn.Close();
 
-                if (label7.Text == "1")
-                {
-                    toolStripStatusLabel1.Text = $"Итоговая сумма заказа №{SomeClass.new_inserted_order_id} составляет {sumOrder / 2} рублей";
-                    conn.Open();
-                    string query2 = $"UPDATE orders SET sum_order='{sumOrder / 2}' WHERE (id_order='{SomeClass.new_inserted_order_id}')";
-                    MySqlCommand comman1 = new MySqlCommand(query2, conn);
-                    comman1.ExecuteNonQuery();
-                    conn.Close();
-                    dataGridView2.Rows.Clear();
-                    SomeClass.new_inserted_order_id = "0";
-                    MessageBox.Show("Оформление билета прошло успешно!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (label7.Text == "1")
+                    {
+                        toolStripStatusLabel1.Text = $"Итоговая сумма заказа №{SomeClass.new_inserted_order_id} составляет {sumOrder / 2} рублей";
+                        conn.Open();
+                        string query2 = $"UPDATE orders SET sum_order='{sumOrder / 2}' WHERE (id_order='{SomeClass.new_inserted_order_id}')";
+                        MySqlCommand comman1 = new MySqlCommand(query2, conn);
+                        comman1.ExecuteNonQuery();
+                        conn.Close();
+                        dataGridView2.Rows.Clear();
+                        SomeClass.new_inserted_order_id = "0";
+                        MessageBox.Show("Оформление билета прошло успешно!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    if (label7.Text == "2")
+                    {
+                        toolStripStatusLabel1.Text = $"Итоговая сумма заказа №{SomeClass.new_inserted_order_id} составляет {sumOrder} рублей";
+                        conn.Open();
+                        string query2 = $"UPDATE orders SET sum_order='{sumOrder}' WHERE (id_order='{SomeClass.new_inserted_order_id}')";
+                        MySqlCommand comman1 = new MySqlCommand(query2, conn);
+                        comman1.ExecuteNonQuery();
+                        conn.Close();
+                        dataGridView2.Rows.Clear();
+                        SomeClass.new_inserted_order_id = "0";
+                        MessageBox.Show("Оформление билета прошло успешно!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                if (label7.Text == "2")
+                else
                 {
-                    toolStripStatusLabel1.Text = $"Итоговая сумма заказа №{SomeClass.new_inserted_order_id} составляет {sumOrder} рублей";
-                    conn.Open();
-                    string query2 = $"UPDATE orders SET sum_order='{sumOrder}' WHERE (id_order='{SomeClass.new_inserted_order_id}')";
-                    MySqlCommand comman1 = new MySqlCommand(query2, conn);
-                    comman1.ExecuteNonQuery();
-                    conn.Close();
-                    dataGridView2.Rows.Clear();
-                    SomeClass.new_inserted_order_id = "0";
-                    MessageBox.Show("Оформление билета прошло успешно!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Заказ не создан. Создайте заказ!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch
             {
-                MessageBox.Show("Заказ не создан. Создайте заказ!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 
