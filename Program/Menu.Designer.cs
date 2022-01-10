@@ -227,7 +227,7 @@ namespace Program
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(1)))), ((int)(((byte)(14)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(734, 307);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
@@ -245,6 +245,8 @@ namespace Program
             this.Controls.Add(this.button1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(750, 345);
+            this.MinimumSize = new System.Drawing.Size(750, 345);
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное меню";
