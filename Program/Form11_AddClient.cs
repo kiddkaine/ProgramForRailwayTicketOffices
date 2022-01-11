@@ -25,7 +25,6 @@ namespace Program
             conn.Open();
             list_train_table.Columns.Add(new DataColumn("id_privilege", System.Type.GetType("System.Int32")));
             list_train_table.Columns.Add(new DataColumn("availability", System.Type.GetType("System.String")));
-            //Настройка видимости полей комбобокса
             comboBox1.DataSource = list_train_table;
             comboBox1.DisplayMember = "availability";
             comboBox1.ValueMember = "id_privilege";
