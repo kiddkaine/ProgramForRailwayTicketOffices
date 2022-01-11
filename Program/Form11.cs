@@ -326,17 +326,24 @@ namespace Program
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selected_id_flight = comboBox1.SelectedValue.ToString();
-            conn.Open();
-            string sql = $"SELECT id_privilege FROM clients WHERE id_client={selected_id_flight}";
-            MySqlCommand command = new MySqlCommand(sql, conn);
-            MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            try
             {
-                label7.Text = reader[0].ToString();
+                string selected_id_flight = comboBox1.SelectedValue.ToString();
+                conn.Open();
+                string sql = $"SELECT id_privilege FROM clients WHERE id_client={selected_id_flight}";
+                MySqlCommand command = new MySqlCommand(sql, conn);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    label7.Text = reader[0].ToString();
+                }
+                reader.Close();
+                conn.Close();
             }
-            reader.Close();
-            conn.Close();
+            catch
+            {
+
+            }
         }
     }
 }

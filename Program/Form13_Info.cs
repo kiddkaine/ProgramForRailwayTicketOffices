@@ -21,7 +21,7 @@ namespace Program
         public void SelectData()
         {
             conn.Open();
-            this.Text = $"Информация о заказе №{ControlData.ID}";
+            this.Text = $"Информация о билете №{ControlData.ID}";
             string sql = $"SELECT * FROM ticket_orders WHERE id_ticket={ControlData.ID}";
             MySqlCommand command = new MySqlCommand(sql, conn);
             MySqlDataReader reader = command.ExecuteReader();
